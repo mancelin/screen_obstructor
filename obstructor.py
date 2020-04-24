@@ -22,10 +22,15 @@ def number_or_default(s, default):
 def on_keyboard_press(key):
     global obstructor1
     if (key == Key.esc):
-        _g = globals()
-        for i in range(1, 5):
-            obstructor_name = "obstructor{}".format(i)
-            _g[obstructor_name].destroy()
+        obstructor1.destroy()
+        # obstructor2.destroy()
+        # obstructor3.destroy()
+        # obstructor4.destroy()
+        sys.exit()
+        # _g = globals()
+        # for i in range(1, 5):
+        #     obstructor_name = "obstructor{}".format(i)
+        #     _g[obstructor_name].destroy()
 
 
 if __name__ == '__main__':
