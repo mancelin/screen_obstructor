@@ -13,14 +13,10 @@ class Example(tk.Tk):
 
 
 class FloatingWindow(tk.Toplevel):
-    def __init__(self, extra_args):
+    def __init__(self):
         tk.Toplevel.__init__(self)
-        print(extra_args)
-        # extra_args = args[1]
-        # print(kwargs)
         self.overrideredirect(True)
-        # self.wm_geometry("400x400")
-        self.wm_geometry("{}x{}".format(w, h))
+        self.wm_geometry("45+80{}x{}".format(w, h))
 
         self.label = tk.Label(self, text="")
         self.label.pack(side="top", fill="both", expand=True)
@@ -38,10 +34,19 @@ class FloatingWindow(tk.Toplevel):
         self.geometry("%sx%s" % ((x1-x0), (y1-y0)))
         return
 
-# if __name__ == '__main__':
-#     parser = argparse.ArgumentParser("obstructor")
-#     parser.add_argument("w", help="width of obstructor")
-#     args = parser.parse_args()
-#     # if args.w =
-app = Example()
-app.mainloop()
+def number_or_default(s, default):
+    try:
+        n = int(s)
+        return n
+    except ValueError:
+        return default
+
+if __name__ == '__main__':
+    # global w, h
+
+    parser = argparse.ArgumentParser("obstructor")
+    parser.add_argument("w", help="width of obstructor")
+    args = parser.parse_args()
+    w = number_or_default(args.w, w)
+    app = Example()
+    app.mainloop()
