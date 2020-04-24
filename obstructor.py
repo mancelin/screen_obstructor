@@ -72,8 +72,6 @@ if __name__ == '__main__':
     app.configure()
 
     def close(event):
-        print("close")
-        # sys.exit()
         app.destroy()
 
     keyboard_listener = Listener(
@@ -82,5 +80,4 @@ if __name__ == '__main__':
 
     app['bg'] = '#000000'
     app.overrideredirect(True)
-    # app.bind('<Escape>', close)
     app.mainloop()
