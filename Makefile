@@ -1,2 +1,2 @@
 run:
-	python obstructor.py 200
+	python obstructor.py 200 50
