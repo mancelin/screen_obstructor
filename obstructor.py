@@ -19,8 +19,6 @@ def on_keyboard_press(key):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser("obstructor.py")
-    parser.add_argument("w", help="width of screen")
-    parser.add_argument("h", help="height of screen")
     parser.add_argument("x", help="x of visble")
     parser.add_argument("y", help="y of visble")
     parser.add_argument("wv", help="width of visble")
@@ -31,20 +29,27 @@ if __name__ == '__main__':
         on_press=on_keyboard_press)
     keyboard_listener.start()
 
+    root = tk.Tk()
+    width = root.winfo_screenwidth()
+    height = root.winfo_screenheight()
+    print("width x height = %d x %d \n" % (width, height))
+    root.overrideredirect(True)
+    root.destroy()
+
     w1 = int(args.x)
-    h1 = int(args.h)
+    h1 = height
     x1 = 0
     y1 = 0
-    w2 = int(args.w)
+    w2 = width
     h2 = int(args.y)
     x2 = 0
     y2 = 0
-    w3 = int(args.w) - (int(args.wv) + int(args.x))
-    h3 = int(args.h)
+    w3 = width - (int(args.wv) + int(args.x))
+    h3 = height
     x3 = int(args.x) + int(args.wv)
     y3 = 0
-    w4 = int(args.w)
-    h4 = int(args.h) - (int(args.hv) + int(args.y))
+    w4 = width
+    h4 = height - (int(args.hv) + int(args.y))
     x4 = 0
     y4 = int(args.y) + int(args.hv)
 

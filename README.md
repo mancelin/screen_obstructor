@@ -27,11 +27,9 @@ pip install -r requirements.txt
 ## Use - obstructor
 
 ```
-usage: obstructor.py [-h] w h x y wv hv
+usage: obstructor.py [-h] x y wv hv
 
 positional arguments:
-  w           width of screen
-  h           height of screen
   x           x of visble
   y           y of visble
   wv          width of visble
