@@ -24,7 +24,7 @@ sudo apt-get install python3-tk
 pip install -r requirements.txt
 ```
 
-## use - obstructor
+## Use - obstructor
 
 ```
 usage: obstructor.py [-h] w h x y wv hv
@@ -40,6 +40,11 @@ positional arguments:
 optional arguments:
   -h, --help  show this help message and exit
 ```
+
+## Issues
+For now, you can't quit the obstructor simply by pressing <kbd>Esc</kbd>.
+
+For quitting the obstructor, go back to the terminal you lauched it from, press <kbd>Ctrl</kbd> + <kbd>C</kbd> then over the black zone of the obstructor, it will stop the program.
 
 ## Licence
 GNU GENERAL PUBLIC LICENSE
