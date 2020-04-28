@@ -1,5 +1,4 @@
 import tkinter as tk
-from tkinter import ttk
 import argparse
 import sys
 from pynput.keyboard import Key, Listener
