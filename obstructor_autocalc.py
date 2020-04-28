@@ -61,7 +61,6 @@ if __name__ == '__main__':
         _g[obstructor_name].configure()
         _g[obstructor_name]['bg']='#000000'
         _g[obstructor_name].overrideredirect(True)
-    print(_g)
     for i in range(1, 5):
         obstructor_name = "obstructor{}".format(i)
         _g[obstructor_name].mainloop()
