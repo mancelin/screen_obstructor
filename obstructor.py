@@ -18,7 +18,7 @@ def on_keyboard_press(key):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser("obstructor")
+    parser = argparse.ArgumentParser("obstructor.py")
     parser.add_argument("w", help="width of screen")
     parser.add_argument("h", help="height of screen")
     parser.add_argument("x", help="x of visble")
