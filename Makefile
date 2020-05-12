@@ -1,2 +1,5 @@
+auto:
+	./run_auto.sh
+
 run:
-	python obstructor.py 20 40 400 300
+	python3 obstructor.py 20 40 400 300
