@@ -1,8 +1,8 @@
 {
-	"VLC media player" : {
+	"VLC" : {
 		"offset_x": 0,
-		"offset_y": 23,
+		"offset_y": 25,
 		"offset_width": 0,
-		"offset_height": 53
+		"offset_height": 55
 	}
 }

@@ -28,8 +28,14 @@ exec('xwininfo', (error, stdout, stderr) => {
 	let H = parseInt(lines
 		.find(l => /Height:/.test(l))
 		.match(/\d+/)[0]);
-	if (config[windowName] != null) {
-		const cfg = config[windowName];
+	let cfg = null;
+	for (let i in config) {
+		if (windowName.includes(i)) {
+			cfg = config[i];
+			break;
+		}
+	}
+	if (cfg !== null) {
 		X += cfg.offset_x;
 		W -= cfg.offset_x + cfg.offset_width;
 		Y += cfg.offset_y;
